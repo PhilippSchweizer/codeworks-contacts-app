@@ -19,5 +19,5 @@ npm i
 Start the dev server
 
 ```
-gulp
+gulp watch
 ```
