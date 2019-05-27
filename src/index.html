@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contacts</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+    
+    <link rel="stylesheet" href="/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/css/styles.css"/>
+  </head>
+  <body class="container-fluid">
+    <header class="row">
+      <div class="col-sm"></div>
+      <div class="col-sm-9">
+        <h1 class="display-1">Contacts</h1>
+        <h2>A place for all your contacts</h2>
+      </div>
+    </header>
+    <div class="row">
+      <nav class="col-sm">
+        <ul>
+          <li>Home</li>
+          <li>Groups</li>
+          <li>Search</li>
+        </ul>
+      </nav>
+      <main role="main" class="col-sm-9 mb-3">
+        <header>
+          <h1>List of contacts</h1>
+        </header>
+        <nav>
+          <p>Filter</p>
+        </nav>
+        <ul>
+          <li>First Name</li>
+          <li>Last Name</li>
+          <li>Email</li>
+          <li>Phone</li>
+        </ul>
+        <form action="" method="GET" autocomplete="on" name="createContact">
+          <label for="GET-name">Name</label>
+          <input type="text" id="GET-name" name="name" />
+          <label for="GET-lastname">Lastname</label>
+          <input type="text" id="GET-lastname" name="lastname" />
+          <label for="GET-email">Email</label>
+          <input type="text" name="email" id="GET-email" />
+          <label for="GET-phone">Phone</label>
+          <input type="text" name="phone" id="GET-phone" />
+        </form>
+      </main>
+    </div>
+    <footer class="row justify-content-center">
+      <div class="col-auto mt-3 mt-sm-4 mt-md-5">
+        © 2019 <a href="https://github.com/PhilippSchweizer">phmasc</a>.
+        Published under MIT license.
+      </div>
+    </footer>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <scrip  src="/js/bootstrap.min.js"></script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
