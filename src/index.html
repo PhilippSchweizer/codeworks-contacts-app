@@ -2,52 +2,135 @@
 <html lang="en">
   <head>
     <title>Contacts</title>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
-    
-    <link rel="stylesheet" href="/css/bootstrap.css"/>
-    <link rel="stylesheet" href="/css/styles.css"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body class="container-fluid">
+    <!-- Header -->
     <header class="row">
-      <div class="col-sm"></div>
-      <div class="col-sm-9">
+      <div class="col-sm">
         <h1 class="display-1">Contacts</h1>
-        <h2>A place for all your contacts</h2>
+        <h2 class="display-4">A place for all your contacts</h2>
       </div>
     </header>
+
     <div class="row">
-      <nav class="col-sm">
-        <ul>
-          <li>Home</li>
-          <li>Groups</li>
-          <li>Search</li>
-        </ul>
-      </nav>
       <main role="main" class="col-sm-9 mb-3">
         <header>
-          <h1>List of contacts</h1>
+          <h1 class="h3">List of contacts</h1>
         </header>
-        <nav>
-          <p>Filter</p>
-        </nav>
-        <ul>
-          <li>First Name</li>
-          <li>Last Name</li>
-          <li>Email</li>
-          <li>Phone</li>
-        </ul>
-        <form action="" method="GET" autocomplete="on" name="createContact">
-          <label for="GET-name">Name</label>
-          <input type="text" id="GET-name" name="name" />
-          <label for="GET-lastname">Lastname</label>
-          <input type="text" id="GET-lastname" name="lastname" />
-          <label for="GET-email">Email</label>
-          <input type="text" name="email" id="GET-email" />
-          <label for="GET-phone">Phone</label>
-          <input type="text" name="phone" id="GET-phone" />
-        </form>
+
+        <!-- Button trigger modal -->
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#addContact"
+        >
+          Add a new contact
+        </button>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="addContact"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="newContact"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="newContact">New Contact</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <form method="GET">
+                <div class="modal-body">
+                  <div class="form-row mb-3">
+                    <div class="col">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="firstName"
+                        name="firstName"
+                        placeholder="First name"
+                      />
+                    </div>
+                    <div class="col">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="lastName"
+                        name="lastName"
+                        placeholder="Last name"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-row mb-3">
+                    <div class="col">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        placeholder="Email"
+                      />
+                    </div>
+                    <div class="col">
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="phone"
+                        name="phone"
+                        placeholder="Phone"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="address">Address</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="address"
+                      name="address"
+                      placeholder="1234 Main St"
+                    />
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <input
+                    type="submit"
+                    value="Save Contact"
+                    class="btn btn-primary"
+                    onclick="storeContact()"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
     <footer class="row justify-content-center">
@@ -56,10 +139,9 @@
         Published under MIT license.
       </div>
     </footer>
-
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <scrip  src="/js/bootstrap.min.js"></script>
-    <script src="/js/index.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
