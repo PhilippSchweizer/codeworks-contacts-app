@@ -51,8 +51,8 @@ function watch() {
   });
 
   gulp.watch(paths.css.src, style);
-  gulp.watch(paths.js.src, reload);
-  gulp.watch("src/*.html", reload);
+  gulp.watch(paths.js.src).on('change', reload);
+  gulp.watch("src/*.html").on('change', reload);
 }
 
 exports.style = style;
