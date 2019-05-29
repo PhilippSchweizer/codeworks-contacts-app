@@ -1,8 +1,3 @@
-function storeContact() {
-  contactsList.push(contact);
-}
-
-
 $( document ).ready(function() {
   // Globals
   let firstName = $('#firstName').val();
@@ -14,6 +9,7 @@ $( document ).ready(function() {
 
   // On submit of form, save contact in object 
   $('#saveContact').click(() => {
+    console.log('click')
     let contact = $("<li class='list-group-item'><p>'"+ email +"'</p><p>'"+ firstName +"'</p><p>'"+ lastName +"'</p><p>'"+ phone +"'</p><p>'"+ address +"'</p></li>");
     
     // Append contact to contact list
