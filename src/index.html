@@ -14,19 +14,15 @@
   </head>
   <body class="container-fluid">
     <!-- Header -->
-    <header class="row">
+    <header class="row m-md-5">
       <div class="col-sm">
         <h1 class="display-1">Contacts</h1>
         <h2 class="display-4">A place for all your contacts</h2>
       </div>
     </header>
 
-    <div class="row">
-      <main role="main" class="col-sm-9 mb-3">
-        <header>
-          <h1 class="h3">List of contacts</h1>
-        </header>
-
+    <div class="row m-md-5">
+      <nav class="col-sm">
         <!-- Button trigger modal -->
         <button
           type="button"
@@ -36,6 +32,11 @@
         >
           Add a new contact
         </button>
+      </nav>
+      <main role="main" class="col-sm-9">
+        <header>
+          <h1 class="h3">List of contacts</h1>
+        </header>
 
         <!-- Modal -->
         <div
@@ -59,7 +60,7 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <form method="GET">
+              <form method="GET" id="contact">
                 <div class="modal-body">
                   <div class="form-row mb-3">
                     <div class="col">
@@ -89,6 +90,7 @@
                         id="email"
                         name="email"
                         placeholder="Email"
+                        required
                       />
                     </div>
                     <div class="col">
@@ -120,21 +122,23 @@
                   >
                     Close
                   </button>
-                  <input
-                    type="submit"
-                    value="Save Contact"
-                    class="btn btn-primary"
-                    onclick="storeContact()"
-                  />
+                  <button class="btn btn-primary" id="saveContact">
+                    Save Contact
+                  </button>
                 </div>
               </form>
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col mb-3">
+            <ul id="contactList"></ul>
+          </div>
+        </div>
       </main>
     </div>
-    <footer class="row justify-content-center">
-      <div class="col-auto mt-3 mt-sm-4 mt-md-5">
+    <footer class="row m-md-5">
+      <div class="col-auto">
         © 2019 <a href="https://github.com/PhilippSchweizer">phmasc</a>.
         Published under MIT license.
       </div>
