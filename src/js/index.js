@@ -14,23 +14,12 @@ $( document ).ready(function() {
 
   // On submit of form, save contact in object 
   $('#saveContact').click(() => {
-    let contact = {
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      phone: phone,
-      address: address,
-    }
+    let contact = $("<li class='list-group-item'><p>'"+ email +"'</p><p>'"+ firstName +"'</p><p>'"+ lastName +"'</p><p>'"+ phone +"'</p><p>'"+ address +"'</p></li>");
+    
     // Append contact to contact list
-    contactList.html('<li></li>')
+    contactList.append(contact);
     // Save contact with email as identifier in localStorage
     localStorage.setItem($('#email').val(), JSON.stringify(contact));
   })
-
-  // Handle contact list in form of state
-  function setState(newState) {
-    let 
-  }
-
 
 });
