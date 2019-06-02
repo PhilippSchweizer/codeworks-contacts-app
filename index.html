@@ -10,19 +10,15 @@
     />
 
     <link rel="stylesheet" href="src/css/bootstrap.css" />
+    <link rel="stylesheet" href="src/css/open-iconic-bootstrap.css" />
     <link rel="stylesheet" href="src/css/styles.css" />
   </head>
   <body class="container-fluid">
     <!-- Header -->
     <header class="row m-md-5">
       <div class="col-sm">
-        <h1 class="display-1">Contacts</h1>
-        <h2 class="display-4">A place for all your contacts</h2>
-      </div>
-    </header>
-
-    <div class="row m-md-5">
-      <nav class="col-sm">
+        <h1 class="display-2">Contacts</h1>
+        
         <!-- Button trigger modal -->
         <button
           type="button"
@@ -30,14 +26,16 @@
           data-toggle="modal"
           data-target="#addContact"
         >
-          Add a new contact
+          <span class="oi oi-plus"></span
+          ><span class="d-none d-sm-inline">
+            Add a new contact
+          </span>
         </button>
-      </nav>
-      <main role="main" class="col-sm-9">
-        <header>
-          <h1 class="h3">List of contacts</h1>
-        </header>
+    </header>
 
+    <div class="row m-md-5">
+      <nav class="col-sm"></nav>
+      <main role="main" class="col-sm-9">
         <!-- Modal -->
         <div
           class="modal fade"
@@ -130,13 +128,31 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col mb-3">
-            <ul class="list-group" id="contactList">
-              <li class="list-group-item">
-                <p>Email</p>
-              </li>
-            </ul>
+        <div class="row pb-sm-3 border-bottom">
+          <div
+            class="col-sm-3 d-flex justify-content-center align-items-center bg-light rounded"
+          >
+            <span>hardcoded@example.com</span>
+          </div>
+          <div class="col-sm-8">
+            <div class="row">
+              <p class="col">Firstname</p>
+              <p class="col">Lastname</p>
+              <div class="w-100"></div>
+              <p class="col">Address</p>
+              <p class="col">Phone</p>
+            </div>
+          </div>
+          <div
+            class="col-sm-1 d-flex justify-content-center align-items-center"
+          >
+            <button class="btn btn-outline-danger btn-lg mx-auto delete">
+              <span
+                class="oi oi-delete text-danger"
+                title="delete"
+                aria-hidden="true"
+              ></span>
+            </button>
           </div>
         </div>
       </main>
