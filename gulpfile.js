@@ -46,13 +46,13 @@ function reload() {
 function watch() {
   browserSync.init({
     server: {
-      baseDir: "./src"
+      baseDir: "./"
     }
   });
 
   gulp.watch(paths.css.src, style);
-  gulp.watch(paths.js.src).on('change', reload);
-  gulp.watch("src/*.html").on('change', reload);
+  gulp.watch("src/js/*.js").on('change', reload);
+  gulp.watch("*.html").on('change', reload);
 }
 
 exports.style = style;
