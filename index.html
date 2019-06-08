@@ -16,25 +16,35 @@
   <body class="container-fluid">
     <!-- Header -->
     <header class="row m-md-5">
-      <div class="col-sm">
-        <h1 class="display-2">Contacts</h1>
-        
-        <!-- Button trigger modal -->
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-toggle="modal"
-          data-target="#addContact"
-        >
-          <span class="oi oi-plus"></span
-          ><span class="d-none d-sm-inline">
-            Add a new contact
-          </span>
-        </button>
+      <div class="col-sm mb-3">
+        <h1 class="display-2 d-none d-sm-block">Contacts</h1>
+        <nav class="navbar px-0">
+          <input
+            type="search"
+            id="search"
+            class="form-control"
+            placeholder="Search contacts"
+            aria-label="Search"
+          />
+        </nav>
+      </div>
     </header>
 
+    <!-- Button trigger modal -->
+
+    <button
+      type="button"
+      class="btn btn-primary btn-circle add-contact-btn"
+      data-toggle="modal"
+      data-target="#addContact"
+    >
+      <span class="oi oi-plus"></span
+      ><span class="d-none d-sm-inline">
+        Add a new contact
+      </span>
+    </button>
+
     <div class="row m-md-5">
-      <nav class="col-sm"></nav>
       <main role="main" class="col-sm-9">
         <!-- Modal -->
         <div
@@ -128,36 +138,50 @@
             </div>
           </div>
         </div>
-        <div class="row pb-sm-3 border-bottom">
-          <div
-            class="col-sm-3 d-flex justify-content-center align-items-center bg-light rounded"
-          >
-            <span>hardcoded@example.com</span>
-          </div>
-          <div class="col-sm-8">
-            <div class="row">
-              <p class="col">Firstname</p>
-              <p class="col">Lastname</p>
-              <div class="w-100"></div>
-              <p class="col">Address</p>
-              <p class="col">Phone</p>
+
+        <!-- Contact List -->
+        <div id="contactList">
+          <!-- Hardcoded Contact -->
+          <div class="card">
+            <div class="card-header" id="Lastname_Firstname">
+              <h2 class="mb-0 row">
+                <button
+                  class="btn col text-left"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapse_Lastname_Firstname"
+                  aria-expanded="true"
+                  aria-controls="collapse_Lastname_Firstname"
+                >
+                  Lastname, Firstname
+                </button>
+                <button class="delete btn px-0 col-1">
+                  <span
+                    class="oi oi-delete text-danger"
+                    title="delete"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+              </h2>
             </div>
-          </div>
-          <div
-            class="col-sm-1 d-flex justify-content-center align-items-center"
-          >
-            <button class="btn btn-outline-danger btn-lg mx-auto delete">
-              <span
-                class="oi oi-delete text-danger"
-                title="delete"
-                aria-hidden="true"
-              ></span>
-            </button>
+
+            <div
+              id="collapse_Lastname_Firstname"
+              class="collapse show"
+              aria-labelledby="Lastname_Firstname"
+              data-parent="#contactList"
+            >
+              <div class="card-body">
+                <p>hardcoded@example.com</p>
+                <p>+1 987 654</p>
+                <p>123 Street</p>
+              </div>
+            </div>
           </div>
         </div>
       </main>
     </div>
-    <footer class="row m-md-5">
+    <footer class="row mt-5 m-md-5">
       <div class="col-auto">
         © 2019 <a href="https://github.com/PhilippSchweizer">phmasc</a>.
         Published under MIT license.
