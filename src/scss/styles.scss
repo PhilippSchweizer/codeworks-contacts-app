@@ -109,3 +109,11 @@ html {
 @media (min-width: 768px) {
   @include create-heading-type-scale(minor-third);
 }
+
+@media (max-width: 768px) {
+  .add-contact-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+}
